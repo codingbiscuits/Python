@@ -27,16 +27,20 @@ while game_is_on:
     snek.move()
 
     # Detect collision with food.
-    if snek.head.distance(food) < 13.25:
+    if snek.head.distance(food) < 14:
         food.refresh()
-        scoreboard.score += 100
+        snek.extend()
         scoreboard.update_score()
-        snek.add_segment()
 
     # Detect collision with wall
     if snek.head.xcor() >= 300 or snek.head.xcor() <= -300 or snek.head.ycor() >= 300 or snek.head.ycor() <= -300:
         scoreboard.game_over()
         game_is_on = False
 
+    # Detect collision with tail
+    for segment in snek.segments[1:]:
+        if snek.head.distance(segment) < 10:
+            scoreboard.game_over()
+            game_is_on = False
 
 screen.exitonclick()

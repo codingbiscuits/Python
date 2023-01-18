@@ -21,5 +21,6 @@ class Scoreboard(t.Turtle):
     def update_score(self):
         # self.undo() this also works instead of self.clear()
         self.clear()
+        self.score += 100
         self.write(f"Score: {self.score}", font=(
             "Courier", 20), align="center")
