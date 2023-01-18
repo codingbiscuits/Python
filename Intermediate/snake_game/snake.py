@@ -24,6 +24,7 @@ class Snake():
 
     def move(self):
         for seg_num in range(len(self.segments)-1, 0, -1):
+            self.segments[seg_num].color("white")
             new_x = self.segments[seg_num - 1].xcor()
             new_y = self.segments[seg_num - 1].ycor()
             self.segments[seg_num].goto(new_x, new_y)
@@ -44,3 +45,9 @@ class Snake():
     def down(self):
         if self.head.heading() != UP:
             self.head.setheading(DOWN)
+
+    def add_segment(self):
+        new_segment = t.Turtle("square")
+        new_segment.penup()
+        new_segment.speed("fastest")
+        self.segments.append(new_segment)
