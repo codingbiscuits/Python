@@ -25,7 +25,7 @@ while game_is_on:
     snek.move()
 
     # Detect collision with food.
-    if snek.head.distance(food) < 15:
+    if snek.head.distance(food) < 13.25:
         food.refresh()
 
 screen.exitonclick()
