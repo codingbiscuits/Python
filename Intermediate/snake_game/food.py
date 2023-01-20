@@ -1,11 +1,13 @@
 import random
 import turtle as t
 
+t.register_shape('grape.gif')
+
 
 class Food(t.Turtle):
     def __init__(self):
         super().__init__()
-        self.shape("circle")
+        self.shape("grape.gif")
         self.penup()
         self.color("purple")
         self.speed("fastest")
