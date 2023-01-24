@@ -1,7 +1,7 @@
 import random
 from turtle import Turtle
 
-MOVE_INCREMENT = 5
+MOVE_INCREMENT = 3
 STARTING_MOVE_DISTANCE = 10
 COLORS = ["red", "orange", "yellow", "green", "blue", "purple"]
 
