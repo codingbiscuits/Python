@@ -1,0 +1,1 @@
+([('main', '/Users/daniel/dev/git/Python/sol-to-usd/dist/main', 'EXECUTABLE')],)

@@ -14,7 +14,7 @@ def change_name2():
 window = tkinter.Tk()
 window.title("D&D Character Sheet")
 window.minsize(width=500, height=300)
-window.config(padx=20, pady=20)
+window.config(padx=20, pady=10)
 
 character_name = tkinter.Label(
     text="Character 1: IRB", font=("Arial", 18, "bold"))
