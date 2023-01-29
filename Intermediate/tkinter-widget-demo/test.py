@@ -1,12 +1,12 @@
-from tkinter import filedialog
 from tkinter import *
+from tkinter import filedialog
 
 
 def browse_button():
     # Allow user to select a directory and store it in global var
     # called folder_path
     global folder_path
-    filename = filedialog.askdirectory()
+    filename = filedialog.askopenfilename()
     folder_path.set(filename)
     print(filename)
 
